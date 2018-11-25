@@ -11,7 +11,7 @@ https://store.docker.com/search?offering=community&type=edition
 
 2. Since this is a 2GB download, preinstall the scipy-notebook, run:
 ```bash
-docker pull jupyter/scipy-notebook:8ccdfc1da8d5
+docker pull jupyter/scipy-notebook:e8613d84128b
 ```
 or `docker pull jupyter/scipy-notebook:latest` if you want to get always the latest version.   
 If you would need to modify this image, README.md in `https://github.com/DataSciencePros/scipy-notebook`
@@ -44,7 +44,7 @@ Copy this repo locally in your workspace, go to (data_science_workshop) repo fol
 Start jupyter docker instance from this folder
  ```bash
  docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes \
- --mount 'type=bind,src='"$(pwd)"'/app,target=/home/jovyan/work' jupyter/scipy-notebook:8ccdfc1da8d5
+ --mount 'type=bind,src='"$(pwd)"'/app,target=/home/jovyan/work' jupyter/scipy-notebook:e8613d84128b
  # alternative way to mount
  # mounts to a new folder, only managed by docker
  # -v "$PWD":/app
