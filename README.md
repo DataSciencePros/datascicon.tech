@@ -5,7 +5,9 @@ This is a broad review of how to
 - create predictive models using scikit-learn and evaluating them
 
 ## Prerequisites to install before coming to the Workshop
-### Docker
+### Recommended: Docker
+We will give you access to a Jupyter Notebook Server running in a virtual machien on the cloud. However, we recommend you to have this notebook server running in a docker image locally on your own development machine, so you will be study this material later more easily.
+
 1. Please make sure you have Docker Community Edition running on your machine.
 https://store.docker.com/search?offering=community&type=edition
 
@@ -13,9 +15,9 @@ https://store.docker.com/search?offering=community&type=edition
 ```bash
 docker pull jupyter/scipy-notebook:e8613d84128b
 ```
-or `docker pull jupyter/scipy-notebook:latest` if you want to get always the latest version.   
+or `docker pull jupyter/scipy-notebook:latest` if you want to get always the latest version. (Using "latest" is not recommended, since you want to know which version of the platform your code was successfully running on...)   
 If you would need to modify this image, README.md in `https://github.com/DataSciencePros/scipy-notebook`
-gives you instructions about how to build the same docker image from the Dockerfile and run it.
+gives you instructions about how to modify this docker image using Dockerfile, build and run it, and push it to dockerhub repo.
 
 For the workshop, you will need to run one docker command (below).  
 Learning docker is useful, you may want to attend the preceding workshop, or self-study:
