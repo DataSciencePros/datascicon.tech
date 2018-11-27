@@ -6,7 +6,9 @@ This is a broad review of how to
 
 ## Prerequisites to install before coming to the Workshop
 ### Recommended: Docker
-We will give you access to a Jupyter Notebook Server running in a virtual machien on the cloud. However, we recommend you to have this notebook server running in a docker image locally on your own development machine, so you will be study this material later more easily.
+We will give you access to a Jupyter Notebook Server running in a virtual machien on the cloud. However, 
+we recommend you to have this notebook server running in a docker image locally on your own development machine, 
+so you will be study this material later more easily.
 
 1. Please make sure you have Docker Community Edition running on your machine.
 https://store.docker.com/search?offering=community&type=edition
@@ -15,16 +17,19 @@ https://store.docker.com/search?offering=community&type=edition
 ```bash
 docker pull jupyter/scipy-notebook:e8613d84128b
 ```
-or `docker pull jupyter/scipy-notebook:latest` if you want to get always the latest version. (Using "latest" is not recommended, since you want to know which version of the platform your code was successfully running on...)   
-If you would need to modify this image, README.md in `https://github.com/DataSciencePros/scipy-notebook`
-gives you instructions about how to modify this docker image using Dockerfile, build and run it, and push it to dockerhub repo.
+or `docker pull jupyter/scipy-notebook:latest` if you want to get always the latest version. (Using "latest" is not 
+recommended, since you want to know which version of the platform your code was successfully running on...)   
+If you would need to modify this image, like adding additional libraries, look at README.md in 
+`https://github.com/DataSciencePros/scipy-notebook` for instructions about how to modify this docker image using 
+Dockerfile, build and run it, and push it to dockerhub repo.
 
 For the workshop, you will need to run one docker command (below).  
 Learning docker is useful, you may want to attend the preceding workshop, or self-study:
 https://github.com/DataSciencePros/docker_workshop
 
 ## Download This Repo (Data, Code and Tasks)
-If you are not familiar with Git, You can browse to https://github.com/DataSciencePros/data_science_workshop, and click on green "Clone or Download" button, and download the zip file.
+If you are not familiar with Git, You can browse to https://github.com/DataSciencePros/data_science_workshop, 
+and click on green "Clone or Download" button, and download the zip file.
 
 ### Recommended Way: Get Them Using "git"
 If new to git, you may follow this guide to install it and study:
@@ -41,7 +46,7 @@ Copy this repo locally in your workspace, go to (data_science_workshop) repo fol
 ```bash
  # this line for recommended way above to get this repo:
  git clone https://github.com/DataSciencePros/data_science_workshop.git
- cd data_science_workshop
+ cd data_science_workshopf
 ```
 Start jupyter docker instance from this folder
  ```bash
