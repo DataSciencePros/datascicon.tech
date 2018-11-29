@@ -49,6 +49,8 @@ Copy this repo locally in your workspace, go to (data_science_workshop) repo fol
  cd data_science_workshopf
 ```
 Start jupyter docker instance from this folder.
+
+### On bash on MacOS
 If using bash:
  ```bash
  docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes --mount 'type=bind,src='"$(pwd)"'/app,target=/home/jovyan/work' jupyter/scipy-notebook:e8613d84128b
@@ -61,19 +63,34 @@ On Windows, you need to share the drive explicitly, going to the settings for Do
 It worked for me after sharing my C drive. For sharing info, please see:
 https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c
 
-After sharing, on powershell!!! 
+After sharing, on powershell: 
 ```powershell
 docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes --mount type=bind,src=$(pwd)/app,target=/home/jovyan/work jupyter/scipy-notebook:e8613d84128b
 ```
 or on Windows command line:
-
+```cmd
 docker run --rm -p 8889:8888 -e JUPYTER_LAB_ENABLE=yes --mount type=bind,src=%cd%/app,target=/home/jovyan/work jupyter/scipy-notebook:e8613d84128b
+```
 
-docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes --mount type=bind,src=%cd%,target=/home/jovyan/work jupyter/scipy-notebook:e8613d84128b
+### On ubuntu
+Installed docker using default "Ubuntu Software Center", try the docker pull command:
+```bash
+docker pull jupyter/scipy-notebook:e8613d84128b
+```
+You may get this error:
+"Got permission denied while trying to connect to the Docker daemon socket..."
+Run this command in your favourite shell and then completely log out of your account and log back in (if in doubt, reboot!):
+
+```bash
+sudo usermod -a -G docker $USER
+```
+Then follow the MacOS section above
+
+### Describing the Command 
 
 Jupyter org defined this image to start notebook server serving files in /home/jovyan/work,
 that is why "app" folder is mapped into that folder.
-"pwd" means current folder in shell.
+"$(pwd)" or %cd% means "print working directory" or "current directory" in shell.
 
 - This command will (download image if local copy is not found and) create instace from image and start execution.
 - It will print how to connect to the jupyter environment and load notebooks, or create new notebooks.
