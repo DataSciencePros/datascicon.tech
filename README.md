@@ -48,14 +48,29 @@ Copy this repo locally in your workspace, go to (data_science_workshop) repo fol
  git clone https://github.com/DataSciencePros/data_science_workshop.git
  cd data_science_workshopf
 ```
-Start jupyter docker instance from this folder
+Start jupyter docker instance from this folder.
+If using bash:
  ```bash
- docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes \
- --mount 'type=bind,src='"$(pwd)"'/app,target=/home/jovyan/work' jupyter/scipy-notebook:e8613d84128b
+ docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes --mount 'type=bind,src='"$(pwd)"'/app,target=/home/jovyan/work' jupyter/scipy-notebook:e8613d84128b
  # alternative way to mount
  # mounts to a new folder, only managed by docker
  # -v "$PWD":/app
 ```
+### On Windows
+On Windows, you need to share the drive explicitly, going to the settings for Docker.
+It worked for me after sharing my C drive. For sharing info, please see:
+https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c
+
+After sharing, on powershell!!! 
+```powershell
+docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes --mount type=bind,src=$(pwd)/app,target=/home/jovyan/work jupyter/scipy-notebook:e8613d84128b
+```
+or on Windows command line:
+
+docker run --rm -p 8889:8888 -e JUPYTER_LAB_ENABLE=yes --mount type=bind,src=%cd%/app,target=/home/jovyan/work jupyter/scipy-notebook:e8613d84128b
+
+docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes --mount type=bind,src=%cd%,target=/home/jovyan/work jupyter/scipy-notebook:e8613d84128b
+
 Jupyter org defined this image to start notebook server serving files in /home/jovyan/work,
 that is why "app" folder is mapped into that folder.
 "pwd" means current folder in shell.
