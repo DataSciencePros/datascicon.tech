@@ -6,9 +6,9 @@ This is a broad review of how to
 
 ## Prerequisites to install before coming to the Workshop
 ### Recommended: Docker
-We will give you access to a Jupyter Notebook Server running in a virtual machien on the cloud. However, 
+We will give you access to a Jupyter Notebook Server running in a virtual machine on the cloud. However, 
 we recommend you to have this notebook server running in a docker image locally on your own development machine, 
-so you will be study this material later more easily.
+so you will be able study this material later more easily.
 
 1. Please make sure you have Docker Community Edition running on your machine.
 https://store.docker.com/search?offering=community&type=edition
