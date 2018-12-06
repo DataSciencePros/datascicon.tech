@@ -59,8 +59,12 @@ If using bash:
  # -v "$PWD":/app
 ```
 ### On Windows
-On Windows, you need to share the drive explicitly, going to the settings for Docker.
-It worked for me after sharing my C drive. For sharing info, please see:
+These are for running Linux Containers on Windows.
+If you have selected to use Windows Containers, switch to Linux Containers by right clicking the Docker Whale in system tray:
+https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10
+
+Then, you need to share the drive explicitly, going to the settings by right clicking the Docker Whale in system tray.
+For screenshots, please see:
 https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c
 
 After sharing, on powershell: 
