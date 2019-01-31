@@ -33,7 +33,9 @@ and click on green "Clone or Download" button, and download the zip file.
 
 ### Recommended Way: Get Them Using "git"
 If new to git, you may follow this guide to install it and study:
-https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+http://rogerdudler.github.io/git-guide/ 
+
+ [//]: # "or https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners"
 
 Make sure a git client is running on your machine, and checkout the needed repos.
 if you use the commandline client:
