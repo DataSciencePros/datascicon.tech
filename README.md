@@ -5,7 +5,7 @@ This is a broad review of how to
 - create predictive models using scikit-learn and evaluating them
 
 ## Prerequisites to install before coming to the Workshop
-### Recommended: Docker
+### Recommended: Docker (or Python and All Dependencies and Jupyter Notebook)
 We will give you access to a Jupyter Notebook Server running in a virtual machine on the cloud. However, 
 we recommend you to have this notebook server running in a docker image locally on your own development machine, 
 so you will be able study this material later more easily.
@@ -44,18 +44,20 @@ git clone https://github.com/DataSciencePros/data_science_workshop.git
 ```
 
 ## Running the Docker Image and Viewing the Jupyter Notebooks
+### If you are using Docker
 Copy this repo locally in your workspace, go to (data_science_workshop) repo folder:
 ```bash
  # this line for recommended way above to get this repo:
  git clone https://github.com/DataSciencePros/data_science_workshop.git
- cd data_science_workshopf
+ cd datascicon.tech
 ```
 Start jupyter docker instance from this folder.
 
 ### On bash on MacOS
 If using bash:
  ```bash
- docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes --mount 'type=bind,src='"$(pwd)"'/app,target=/home/jovyan/work' jupyter/scipy-notebook:e8613d84128b
+ docker run --rm -p 8888:8888 -e JUPYTER_LAB_ENABLE=yes \
+--mount 'type=bind,src='"$(pwd)"'/app,target=/home/jovyan/work' jupyter/scipy-notebook:e8613d84128b
  # alternative way to mount
  # mounts to a new folder, only managed by docker
  # -v "$PWD":/app
